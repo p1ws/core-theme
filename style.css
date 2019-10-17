@@ -1,0 +1,70 @@
+/******************************************************************
+Theme Name: PortMA
+Theme URI: https://www.p1ws.com/
+Description: Custom WordPress theme by Page One Web Solutions.
+Author: P1WS
+Author URI: https://www.p1ws.com/
+Version: P1WS Core Theme 2.0
+Tags: 
+
+License: GNU v3
+License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
+
+MAKE SURE TO READ BELOW BEFORE GETTING STARTED FOR THE FIRST TIME!
+------------------------------------------------------------------
+
+This theme uses Sass by default. If you prefer using regular CSS,
+then feel free to modify this theme how you like and keep a copy
+as your own personal starting point.
+
+It does take a few minutes to wrap your head around, but it will all
+be worth it. Need a quick intro? Here are a few quick reads:
+
+http://simplebits.com/notebook/2013/11/13/sass-book/ 
+http://cognition.happycog.com/article/preprocess-this
+http://viget.com/inspire/sass-a-designers-perspective
+http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/
+http://css-tricks.com/sass-style-guide/
+http://net.tutsplus.com/tutorials/html-css-techniques/developing-with-sass-and-chrome-devtools/
+
+We would HIGHLY RECOMMEND, if you are going to be working with Sass, 
+that you work locally. Browsers don't understand Sass and compiling 
+it on the server takes a bit of a setup.
+
+That being said, here are a few MUST HAVE TOOLS for working with a
+pre-processor: (You really only need one of them)
+
+CodeKit: (Highly Recommended)
+http://incident57.com/codekit/
+
+Compass App: (Windows / Mac Users)
+http://compass.handlino.com/
+
+These applications compile Sass into valid CSS. This
+way you can keep your production files easy to read and your
+CSS minified and speedy. Simply set the output to the
+library/css folder and you are all set. It's a thing of beauty.
+
+You can also setup auto compiling with Grunt or using Terminal on
+OSX. It's a bit complicated to setup so if you aren't familiar
+with it, just get one of the automated applications.
+
+******************************************************************/
+
+/*
+WordPress Includes
+Theme Check (http://wordpress.org/plugins/theme-check/) constantly 
+reports that it needs these classes in the CSS even though they are 
+in the REAL stylesheet in library/css/style.css. We need these here 
+to keep it happy. 
+*/
+
+.sticky {}
+
+/* DO NOT EDIT THIS */
+.gallery-caption {}
+
+/* THESE ARE USELESS */
+.bypostauthor {}
+
+/* THEY ARE ONLY TO KEEP THEME CHECK HAPPY */
