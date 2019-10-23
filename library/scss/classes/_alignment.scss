@@ -1,0 +1,101 @@
+/******************************************************************
+Site Name: Client Name
+Author: P1WS
+
+Stylesheet: Alignment Stylesheet
+
+1. XS | Base
+2. SM | 481px & Up
+3. MD | 768px & Up
+4. LG | 1030px & Up
+5. XL | 1240px & Up
+
+******************************************************************/
+
+/*
+1. XS | BASE
+*********************/
+
+    .xs--align-left {
+        text-align: left;
+    }
+    .xs--align-right {
+        text-align: right;
+    }
+    .xs--align-center {
+        text-align: center;
+    }
+
+/* end Base */
+  
+  
+/*
+2. SM | 481PX & UP
+*********************/
+@media (min-width: 481px) {
+
+    .sm--align-left {
+        text-align: left;
+    }
+    .sm--align-right {
+        text-align: right;
+    }
+    .sm--align-center {
+        text-align: center;
+    }
+
+} /* end 481px & Up */
+    
+  
+/*
+3. MD | 768PX & UP
+*********************/
+@media (min-width: 768px) {
+
+    .md--align-left {
+        text-align: left;
+    }
+    .md--align-right {
+        text-align: right;
+    }
+    .md--align-center {
+        text-align: center;
+    }
+
+} /* end 768px & Up */
+  
+  
+/*
+4. LG | 1030PX & UP
+*********************/
+@media (min-width: 1030px) {
+
+    .lg--align-left {
+        text-align: left;
+    }
+    .lg--align-right {
+        text-align: right;
+    }
+    .lg--align-center {
+        text-align: center;
+    }
+
+} /* end 1030px & Up */
+  
+  
+/*
+5. XL | 1240PX & UP
+*********************/
+@media (min-width: 1240px) {
+
+    .xl--align-left {
+        text-align: left;
+    }
+    .xl--align-right {
+        text-align: right;
+    }
+    .xl--align-center {
+        text-align: center;
+    }
+
+} /* end 1240px & Up */
