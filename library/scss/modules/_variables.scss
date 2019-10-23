@@ -1,0 +1,48 @@
+/******************************************************************
+Site Name: Client Name
+Author: P1WS
+
+Stylesheet: Variables
+
+1. Colors
+2. Use-Case Variables
+3. Reusable Values
+
+******************************************************************/
+
+/* 
+1. BASE COLORS
+*********************/
+
+$color__black: #000000;
+$color__gray--dark: tint($color__black, 20%);
+$color__gray: #666666;
+$color__gray--medium: #989898;
+$color__gray--light: #CCCCCC;
+$color__gray--lighter: #EEEEEE;
+$color__white: #FFFFFF;
+
+$color__primary: #0071BB;
+$color__primary--light: tint($color__primary, 30%);
+$color__primary--lighter: tint($color__primary, 60%);
+$color__primary--lightest: tint($color__primary, 90%);
+$color__secondary: #F8951F;
+
+$color__accent-1: #00B9AF;
+$color__accent-2: #666666;
+
+
+
+/* 
+2. USE-CASE VARIABLES
+*********************/
+$color__action: $color__secondary;
+$color__active: $color__accent-1;
+
+
+
+/* 
+2. ATTRIBUTES
+*********************/
+
+$attr__border-radius: 4px;
