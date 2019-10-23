@@ -36,6 +36,46 @@ functions, and variables.
 
 
 /*********************
+IMPORTING TYPOGRAPHY
+The typography directory contains @font-face declarations,
+type setup and variables.
+*********************/
+
+// Site  Fonts
+@import "typography/fonts";
+
+// Site Font Variables
+@import "typography/variables";
+
+// Site Type Styles
+@import "typography/type";
+
+
+
+/*********************
+IMPORTING CLASSES
+The classes directory is where grid, flex, visibility classes, etc.,
+are created. These can be tweak as needed.
+*********************/
+
+// The Grid
+@import "classes/grid";
+
+// Flexbox Classes
+@import "classes/flexbox";
+
+// Alignment Classes
+@import "classes/alignment";
+
+// Visibility Classes
+@import "classes/visibility";
+
+// Layout Classes
+@import "classes/layout";
+
+
+
+/*********************
 IMPORTING PARTIALS
 The partials directory is where the meat of my CSS is constructed. 
 A lot of folks like to break their stylesheets into header, 
@@ -44,27 +84,6 @@ As I'm more of a SMACSS guy myself, I like to break things down
 into much finer categories (typography, buttons, textboxes, 
 selectboxes, etc…).
 *********************/
-
-// Typography
-@import "typography/fonts";
-@import "typography/variables";
-@import "typography/type";
-
-
-// The Grid
-@import "partials/grid";
-
-// Flexbox Classes
-@import "partials/flexbox";
-
-// Alignment Classes
-@import "partials/alignment";
-
-// Visibility Classes
-@import "partials/visibility";
-
-// Layout Classes
-@import "partials/layout";
 
 // Table Styles
 @import "partials/tables";
@@ -106,37 +125,38 @@ selectboxes, etc…).
 
 
 /*********************
-IMPORTING SITE PARTS
-Modules are reusable blocks or elements we use throughout the project.
-We can break them up as much as we want or just keep them all in one.
+IMPORTING COMPONENTS
+Components are reusable blocks or custom elements we use 
+throughout the site. Generally speaking, creating a componenent is
+most useful when a piece of code is needed in multiple places.
 *********************/
 
 // Global Element Styles
-@import "site-parts/global";
+@import "components/global";
 
 // Global Header Styles
-@import "site-parts/global-header";
+@import "components/global-header";
 
 // Global Footer Styles
-@import "site-parts/global-footer";
+@import "components/global-footer";
 
 // Mobile Sticky Bar
-@import "site-parts/mobile-navbar";
+@import "components/mobile-navbar";
 
 // Navigation Styles
-@import "site-parts/navigation";
+@import "components/navigation";
 
 // Custom Scrollbar Styles
-@import "site-parts/scrollbar";
+@import "components/scrollbar";
 
 // Article Styles
-@import "site-parts/article";
+@import "components/article";
 
 // Form Styles
-@import "site-parts/forms";
+@import "components/forms";
 
 // Form Styles
-@import "site-parts/flexible-layout";
+@import "components/flexible-layout";
 
 
 
@@ -144,6 +164,8 @@ We can break them up as much as we want or just keep them all in one.
 
 /*********************
 IMPORTING TEMPLATE STYLES
+Create a new file here for each new template 
+and use php includes in templates to include components
 *********************/
 
 // Home Template Specific Styles
@@ -156,9 +178,6 @@ IMPORTING TEMPLATE STYLES
 @import "templates/blog";
 
 /*Add Custom Custom SCSS Templates Below*/
-
-
-
 
 
 /*********************
