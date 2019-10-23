@@ -1,0 +1,180 @@
+/******************************************************************
+Site Name: Client Name
+Author: P1WS
+
+Stylesheet: Main Stylesheet
+
+Here, you'll see we are calling in 
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+
+Helpful articles on Sass file organization:
+http://thesassway.com/advanced/modular-css-naming-conventions 
+
+******************************************************************/
+
+/*********************
+IMPORTING PARTIALS
+These files are needed at the beginning so that we establish all
+our mixins, functions, and variables that we'll be using across
+the whole project.
+*********************/
+
+// Normalize CSS: http://necolas.github.io/normalize.css/
+@import "partials/normalize";
+
+// Sass Functions
+@import "partials/functions";
+
+// Import Mixins
+@import "partials/mixins";
+
+// Sass Variables
+@import "partials/variables";
+
+// Typography
+@import "typography/fonts";
+@import "typography/variables";
+@import "typography/type";
+
+
+// The Grid
+@import "partials/grid";
+
+// Flexbox Classes
+@import "partials/flexbox";
+
+// Alignment Classes
+@import "partials/alignment";
+
+// Visibility Classes
+@import "partials/visibility";
+
+// Layout Classes
+@import "partials/layout";
+
+// Table Styles
+@import "partials/tables";
+
+// Tab Styles
+@import "partials/tabs";
+
+// Slider Styles
+@import "partials/sliders";
+
+// CSS KeyFrame Animations
+@import "partials/animations";
+
+// Button Styles
+@import "partials/buttons";
+
+// Block Content Styles
+@import "partials/blocks";
+
+// Custom Styles
+@import "partials/toggles";
+
+// Google Map Styles
+@import "partials/maps";
+
+// Mobile Modal
+@import "partials/modal";
+
+// Sticky Header Functionality Styles
+@import "partials/sticky-header";
+
+// Recaptcha Badge Styles
+@import "partials/recaptcha";
+
+// Specific Media Type Styles 
+// ie. images, iframes, etc.
+@import "partials/media";
+
+
+
+/*********************
+IMPORTING SITE PARTS
+Modules are reusable blocks or elements we use throughout the project.
+We can break them up as much as we want or just keep them all in one.
+*********************/
+
+// Global Element Styles
+@import "site-parts/global";
+
+// Global Header Styles
+@import "site-parts/global-header";
+
+// Global Footer Styles
+@import "site-parts/global-footer";
+
+// Mobile Sticky Bar
+@import "site-parts/mobile-navbar";
+
+// Navigation Styles
+@import "site-parts/navigation";
+
+// Custom Scrollbar Styles
+@import "site-parts/scrollbar";
+
+// Article Styles
+@import "site-parts/article";
+
+// Form Styles
+@import "site-parts/forms";
+
+// Form Styles
+@import "site-parts/flexible-layout";
+
+
+
+
+
+/*********************
+IMPORTING TEMPLATE STYLES
+*********************/
+
+// Home Template Specific Styles
+@import "templates/home";
+
+// Default Template Specific Styles
+@import "templates/default";
+
+// Blog Styles
+@import "templates/blog";
+
+/*Add Custom Custom SCSS Templates Below*/
+
+
+
+
+
+/*********************
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want.
+*********************/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+	// styles in 2x.scss
+	@import "breakpoints/2x";
+
+}
+
+// end of media query
+
+/*********************
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*********************/
+@media print {
+
+	// styles in print.scss
+	@import "partials/print";
+
+}

@@ -1,0 +1,84 @@
+/******************************************************************
+Site Name: Client Name
+Author: P1WS
+
+Stylesheet: "Partial Name" Stylesheet
+
+1. XS | Base
+2. SM | 481px & Up
+3. MD | 768px & Up
+4. LG | 1030px & Up
+5. XL | 1240px & Up
+
+******************************************************************/
+
+/*
+1. XS | BASE
+*********************/
+
+#catapult-cookie-bar {
+    background-color: $color__gray--dark !important;
+
+    button#catapultCookie {
+        background-color: $color__white !important;
+        color: $color__gray--dark !important;
+    }
+}
+
+
+
+.home {}
+
+/* end Base */
+
+
+
+/*
+2. SM | 481PX & UP
+*********************/
+@media (min-width: 481px) {
+
+    .home {}
+
+}
+
+/* end 481px & Up */
+
+
+
+/*
+3. MD | 768PX & UP
+*********************/
+@media (min-width: 768px) {
+
+    .home {}
+
+}
+
+/* end 768px & Up */
+
+
+
+/*
+4. LG | 1030PX & UP
+*********************/
+@media (min-width: 1030px) {
+
+    .home {}
+
+}
+
+/* end 1030px & Up */
+
+
+
+/*
+5. XL | 1240PX & UP
+*********************/
+@media (min-width: 1240px) {
+
+    .home {}
+
+}
+
+/* end 1240px & Up */

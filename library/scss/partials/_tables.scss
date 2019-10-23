@@ -1,0 +1,183 @@
+/*----------------------------------*/
+
+.responsive-table {
+	margin-bottom: 40px;
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}	
+	table { 
+		border: solid 1px $color__gray--light;
+		border-radius: $attr__border-radius;
+		padding: 20px;
+		width: 100%; 
+		/* Hide table headers (but not display: none;, for accessibility) */
+		thead tr { 
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+		tr {  
+			border-bottom: solid 1px $color__primary;
+			margin-bottom: 10px;	
+			padding-bottom: 10px;	
+			&:last-of-type {
+				border-bottom: 0;
+			}
+			th, td {
+				border: 0; 
+				text-align: left;     
+			}  
+			th {
+				color: $color__primary;
+				font-weight: bold;
+			}	
+			> td {
+				&:first-of-type {
+					color: $color__primary;
+				}
+				&:last-of-type {
+					border-bottom: 0;
+				}
+				&.footnotes {
+					color: $color__gray;
+					text-align: left;
+					width: 100%;
+					padding-left: 0;
+					ul {
+						padding-left: 0;
+						margin: 0;
+						li {
+							list-style-type: none;							
+						}
+					}
+				}
+				.asterisk {
+					color: $color__secondary;
+				}
+			}
+			td { 
+				/* Behave  like a "row" */
+				border: none;
+				border-bottom: 1px solid $color__gray--light; 
+				position: relative;
+				padding: 10px 0 10px 30%;
+				text-align: right;
+				@include font-size(14);
+				&:before {
+					/* Now like a table header */
+					position: absolute;
+					/* Top/left values mimic padding */
+					top: 8px;
+					left: 0;
+					width: 25%; 
+					padding-right: 10px; 
+					white-space: nowrap;
+					/* Label the data */
+					content: attr(data-label);
+					color: $color__primary;
+					font-weight: bold;
+					text-align: left;
+				}
+			} 			
+		}	               
+	}		
+}
+
+
+
+
+@media only screen and (min-width:768px) {
+
+	.responsive-table {
+		margin-bottom: 80px;
+		border: solid 1px $color__gray--light;
+		border-radius: $attr__border-radius;
+		padding: 40px;	
+		table { 
+			display: table; 
+			border: 0;
+			padding: 0;
+			tr {
+				margin-bottom: 0;
+				padding-bottom: 0;					
+				th, td {			
+					padding: 20px 0; 
+					text-align: left;
+					@include font-size(16);
+				}				
+			}
+			thead {
+				display: table-header-group;
+				tr { 
+					border-bottom: 0;
+					position: relative;
+					display: table-row;
+					top:0;
+					left: 0;
+					th {
+						display: table-cell;
+						padding-top: 0;
+					}			
+				}		
+			}	
+			tbody {
+				display: table-row-group;
+				tr {
+					display: table-row;
+					border-bottom: solid 1px $color__gray--light;
+					td { 
+						border: 0;
+						padding: 20px 0; 
+						display: table-cell;
+						&:before { 
+							display:none;
+						}  
+					}			
+				}	
+			}
+		}		
+	}	
+	
+
+	/* CUSTOMIZATIONS */
+	#table--bareboat {
+		&.responsive-table {
+			table { 
+				tr {				 
+					th, td {			
+						width: 25%;
+						&:last-of-type {
+							width: 50%;
+						}
+					}				
+				}	
+				tbody {
+					tr {
+						td { 
+							&:last-of-type {
+								@include font-size(14);							
+							}	
+						}
+					}
+				}	
+			}
+		}
+	}
+	
+	#table--crewed {
+		&.responsive-table {
+			table { 
+				tr {				
+					th, td {	
+						flex-grow: 1;
+						&:first-of-type {
+							flex-grow: 2;
+						}
+					}				
+				}	
+			}	
+		}
+	}	
+
+} // end 768px

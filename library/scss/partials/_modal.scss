@@ -1,0 +1,250 @@
+/* LEFT SLIDE MODAL
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+	--lightgray: #efefef;
+	--blue: steelblue;
+	--white: #fff;
+	--black: rgba(0, 0, 0, 0.8);
+	--bounceEasing: cubic-bezier(0.51, 0.92, 0.24, 1.15);
+}
+
+.mobile-open-modal {
+	font-weight: bold;
+	color: black;
+	padding: 0.75rem 1.75rem;
+	margin-bottom: 1rem;
+	border-radius: 5px;
+	background: none;
+}
+
+
+.mobile-modal {
+	position: fixed;
+	max-width: 100%;
+	max-height: 100%;
+	cursor: pointer;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.35s ease-in;
+	//overflow: auto;
+	overflow: hidden;
+}
+
+.mobile-modal.is-visible {
+	visibility: visible;
+	opacity: 1;
+	background: var(--white);
+	top: 0;
+	height: 100%;
+	width: 100%;
+}
+
+// .mobile-modal-content {
+// 	height: 75%;
+// }
+
+.mobile-modal-btns-group {
+	display: none;
+	text-align: center;
+}
+
+.mobile-modal-btns-group ul li {
+	list-style-type: none;
+}
+
+
+.mobile-modal-dialog.is-visible {
+	position: relative;
+	border-radius: 5px;
+	background: var(--white);
+	overflow: auto;
+	cursor: default;
+}
+
+.mobile-modal-header {
+	display: flex;
+	margin-top: 40px;
+	padding: 5px;
+}
+
+#mobile-modal-h2\ h2 {
+	    margin-left: 10%;
+}
+
+.mobile-modal-header .mobile-close-modal {
+	font-size: 1.5rem;
+	float: left;
+	background: none;
+}
+
+
+/* ANIMATIONS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+[data-animation] .mobile-modal-dialog {
+	opacity: 0;
+	transition: all 0.5s var(--bounceEasing);
+}
+
+[data-animation].is-visible .mobile-modal-dialog {
+	opacity: 1;
+	transition-delay: 0.2s;
+}
+
+[data-animation="slideInOutLeft"] .mobile-modal-dialog {
+	transform: translateX(-100%);
+}
+
+[data-animation="slideInOutLeft"].is-visible .mobile-modal-dialog {
+	transform: none;
+}
+
+@keyframes mixInAnimations {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	10% {
+		transform: translateX(0);
+	}
+
+	20% {
+		transform: rotate(20deg);
+	}
+
+	30% {
+		transform: rotate(-20deg);
+	}
+
+	40% {
+		transform: rotate(15deg);
+	}
+
+	50% {
+		transform: rotate(-15deg);
+	}
+
+	60% {
+		transform: rotate(10deg);
+	}
+
+	70% {
+		transform: rotate(-10deg);
+	}
+
+	80% {
+		transform: rotate(5deg);
+	}
+
+	90% {
+		transform: rotate(-5deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.mobile-modal-btns-group {
+		display: flex;
+	}
+}
+
+
+//--------------- FOR POP-UP MODAL------------------------------------------------------
+
+/* The Modal (background) */
+.modal__content-container {	
+    @include transition;
+//  	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+// 	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+// 	overflow: auto; /* Enable scroll if needed */
+	background-color: $color__black; /* Fallback color */
+	@include rgba-background($color__black, 0.4);   
+	
+	z-index: 10;	
+	overflow: hidden;
+	@include flexrow;
+	display: none;
+	@include prefix('justify-content', 'center', webkit ms);
+	@include prefix('align-items', 'center', webkit ms);
+
+	/* Modal Content/Box */
+	.modal__content {		
+// 		@include transition;
+// 		background-color: $color__white;
+		margin: 15% auto; /* 15% from the top and centered */
+// 		padding: 20px;
+// 		width: 80%; /* Could be more or less, depending on screen size */
+		
+		@include transition;
+		background-color: $color__black;
+		padding: 40px;
+		border-radius: $attr__border-radius; 
+		max-width: 800px;
+		width: 100%;
+		iframe {
+			border-width: 0 !important;
+		}
+	}
+
+	/* The Close Button */
+	.close-modal {
+		@include transition;
+		color: $color__white;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+		
+// 		color: $color__white;
+// 		display: block;
+		text-align: right;
+	}
+
+	.close-modal:hover,
+	.close-modal:focus {
+		color: $color__primary;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+}
+
+
+//--------------- HOME MODAL CUSTOMIZATION ------------------------------------------------------
+
+/* The Modal (background) */
+// .modal__content-container {	
+// 	z-index: 10;	
+// 	overflow: hidden;
+// 	@include flexrow;
+// 	display: none;
+// 	@include prefix('justify-content', 'center', webkit ms);
+// 	@include prefix('align-items', 'center', webkit ms);
+
+// 	/* Modal Content/Box */
+// 	.modal__content {		
+// 		@include transition;
+// 		background-color: $color__black;
+// 		padding: 40px;
+// 		border-radius: $attr__border-radius; 
+// 		max-width: 800px;
+// 		width: 100%;
+// 		iframe {
+// 			border-width: 0 !important;
+// 		}
+// 	}
+
+// 	/* The Close Button */
+// 	.close-modal {
+// 		color: $color__white;
+// 		display: block;
+// 		text-align: right;
+// 	}
+
+// }

@@ -1,0 +1,268 @@
+/******************************************************************
+Site Name: Client Namexs--
+Author: P1WS
+
+Stylesheet: Flexbox Styles
+
+******************************************************************/
+
+.flexrow {
+    @include prefix('display', 'flex', webkit ms);
+    @include prefix('flex-wrap', 'wrap', ms);
+    &.vertical {
+        @include prefix('flex-direction', 'column', ms);
+    }
+	&.no-wrap {		
+    	@include prefix('flex-wrap', 'no-wrap', ms);
+    }
+}
+
+/*
+BASE STYLES
+*******************/
+
+.xs--column {
+    @include prefix('flex-direction', 'column', ms);
+}
+.xs--row  {
+    @include prefix('flex-direction', 'row', ms);
+}
+
+.xs--even {
+    @include prefix('justify-content', 'space-evenly', ms);
+}
+.xs--around {
+    @include prefix('justify-content', 'space-around', ms);
+}
+.xs--between {
+    @include prefix('justify-content', 'space-between', ms);
+}
+.xs--start {
+    @include prefix('justify-content', 'flex-start', ms);
+}
+.xs--center {    
+    @include prefix('justify-content', 'center', ms);
+}
+.xs--end {
+    @include prefix('justify-content', 'flex-end', ms);
+}
+.xs--top {
+    @include prefix('align-items', 'flex-start', ms);
+}
+.xs--middle {    
+    @include prefix('align-items', 'center', ms);
+}
+.xs--bottom {
+    @include prefix('align-items', 'flex-end', ms);
+}
+
+.xs--order-1 {    
+    @include prefix('order', '1', ms);
+}
+.xs--order-2 {
+    @include prefix('order', '2', ms);
+}
+
+.xs--grow-1 {
+    @include prefix('flex-grow', '1', webkit ms);
+}
+
+/*
+SMALL: 481px and Up
+*******************/
+@media (min-width: 481px) {
+
+    .sm--column {
+        @include prefix('flex-direction', 'column', ms);
+    }
+    .sm--row  {
+        @include prefix('flex-direction', 'row', ms);
+    }
+
+    .sm--even {
+        @include prefix('justify-content', 'space-evenly', ms);
+    }
+    .sm--around {
+        @include prefix('justify-content', 'space-around', ms);
+    }
+    .sm--between {
+        @include prefix('justify-content', 'space-between', ms);
+    }
+    .sm--start {
+        @include prefix('justify-content', 'flex-start', ms);
+    }
+    .sm--center {    
+        @include prefix('justify-content', 'center', ms);
+    }
+    .sm--end {
+        @include prefix('justify-content', 'flex-end', ms);
+    }
+    .sm--top {
+        @include prefix('align-items', 'flex-start', ms);
+    }
+    .sm--middle {    
+        @include prefix('align-items', 'center', ms);
+    }
+    .sm--bottom {
+        @include prefix('align-items', 'flex-end', ms);
+    }
+
+    .sm--order-1 {    
+        @include prefix('order', '1', ms);
+    }
+    .sm--order-2 {
+        @include prefix('order', '2', ms);
+    }
+}
+
+
+
+/*
+MEDIUM: 768px and Up
+*******************/
+@media (min-width: 768px) {
+
+    .md--column {
+        @include prefix('flex-direction', 'column', ms);
+    }
+    .md--row  {
+        @include prefix('flex-direction', 'row', ms);
+    }
+
+    .md--even {
+        @include prefix('justify-content', 'space-evenly', ms);
+    }
+    .md--around {
+        @include prefix('justify-content', 'space-around', ms);
+    }
+    .md--between {
+        @include prefix('justify-content', 'space-between', ms);
+    }
+    .md--start {
+        @include prefix('justify-content', 'flex-start', ms);
+    }
+    .md--center {    
+        @include prefix('justify-content', 'center', ms); 
+    }
+    .md--end {
+        @include prefix('justify-content', 'flex-end', ms);
+    }
+    .md--top {
+        @include prefix('align-items', 'flex-start', ms);
+    }
+    .md--middle {    
+        @include prefix('align-items', 'center', ms);
+    }
+    .md--stretch {
+        @include prefix('align-items', 'stretch', ms);
+    }
+    .md--bottom {
+        @include prefix('align-items', 'flex-end', ms);
+    }	
+
+    .md--order-1 {    
+        @include prefix('order', '1', ms);
+    }
+    .md--order-2 {
+        @include prefix('order', '2', ms);
+    }
+}
+
+
+
+
+/*
+LARGE: 1030px and Up
+*******************/
+@media (min-width: 1030px) {
+
+    .lg--column {
+        @include prefix('flex-direction', 'column', ms);
+    }
+    .lg--row  {
+        @include prefix('flex-direction', 'row', ms);
+    }
+
+    .lg--even {
+        @include prefix('justify-content', 'space-evenly', ms);
+    }
+    .lg--around {
+        @include prefix('justify-content', 'space-around', ms);
+    }
+    .lg--between {
+        @include prefix('justify-content', 'space-between', ms);
+    }
+    .lg--start {
+        @include prefix('justify-content', 'flex-start', ms);
+    }
+    .lg--center {    
+        @include prefix('justify-content', 'center', ms);
+    }
+    .lg--end {
+        @include prefix('justify-content', 'flex-end', ms);
+    }
+    .lg--top {
+        @include prefix('align-items', 'flex-start', ms);
+    }
+    .lg--middle {    
+        @include prefix('align-items', 'center', ms);
+    }
+    .lg--bottom {
+        @include prefix('align-items', 'flex-end', ms);
+    }
+
+    .lg--order-1 {    
+        @include prefix('order', '1', ms);
+    }
+    .lg--order-2 {
+        @include prefix('order', '2', ms);
+    }
+}
+
+/*
+EXTRA LARGE: 1240px and Up
+*******************/
+@media (min-width: 1240px) {
+
+    .xl--column {
+        @include prefix('flex-direction', 'column', ms);
+    }
+    .xl--row  {
+        @include prefix('flex-direction', 'row', ms);
+    }
+
+    .xl--even {
+        @include prefix('justify-content', 'space-evenly', ms);
+    }
+    .xl--around {
+        @include prefix('justify-content', 'space-around', ms);
+    }
+    .xl--between {
+        @include prefix('justify-content', 'space-between', ms);
+    }
+    .xl--start {
+        @include prefix('justify-content', 'flex-start', ms);
+    }
+    .xl--center {    
+        @include prefix('justify-content', 'center', ms);
+    }
+    .xl--end {
+        @include prefix('justify-content', 'flex-end', ms);
+    }
+    .xl--top {
+        @include prefix('align-items', 'flex-start', ms);
+    }
+    .xl--middle {    
+        @include prefix('align-items', 'center', ms);
+    }
+    .xl--bottom {
+        @include prefix('align-items', 'flex-end', ms);
+    }
+
+    .xl--order-1 {    
+        @include prefix('order', '1', ms);
+    }
+    .xl--order-2 {
+        @include prefix('order', '2', ms);
+    }
+}

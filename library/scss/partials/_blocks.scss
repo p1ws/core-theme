@@ -1,0 +1,172 @@
+/******************************************************************
+Site Name: Client Name
+Author: P1WS
+
+Stylesheet: Blocks Stylesheet
+
+1. XS | Base
+2. SM | 481px & Up
+3. MD | 768px & Up
+4. LG | 1030px & Up
+5. XL | 1240px & Up
+
+******************************************************************/
+
+/*
+1. XS | BASE
+*********************/
+.blocks__container {
+    .block {
+        background-color: $color__white;
+        border: solid 1px $color__gray--light;
+        border-radius: $attr__border-radius;
+        margin-bottom: 20px;
+        @include transition;
+		
+        .block__image {
+			margin-bottom: 40px;
+            .objectfit-container {
+				height: 100%;
+                max-height: 300px;
+                img {
+                    object-fit: cover;
+                	max-height: 300px;
+					border-radius: $attr__border-radius;
+                }	
+				&.objectfit--cover {		
+					img {
+						@include prefix('object-fit', 'cover', o);			
+					}
+				}
+				&.objectfit--contain {		
+					img {
+						@include prefix('object-fit', 'contain', o);			
+					}	
+				}				
+            }
+        }
+        .block__content {
+            //padding: 20px;
+			color: $color__gray--dark;
+			@include transition;
+            .block__title, h2, h3, h4, p {                        
+                @include spacing-reset;     
+                margin-bottom: 20px;     
+                font-weight: bold;
+            } 
+        }
+
+        .block__content-wrapper { 
+			padding: 40px;
+            .block__title {
+                margin-bottom: 20px;
+            }
+        }		
+        &:active, &:focus, &:hover {
+            border-color: $color__primary--lighter;
+			.block__content {
+				color: $color__primary;
+			}
+        }
+
+    }
+}
+
+/* end Base */
+
+
+
+/*
+2. SM | 481PX & UP
+*********************/
+@media (min-width: 481px) {}
+
+/* end 481px & Up */
+
+
+
+/*
+3. MD | 768PX & UP
+*********************/
+@media (min-width: 768px) {
+
+    .blocks__container {
+        .block {
+            margin-bottom: 40px;
+
+            .block__image {
+				margin-bottom: 40px;
+                .objectfit-container {
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+}
+
+/* end 768px & Up */
+
+
+
+/*
+4. LG | 1030PX & UP
+*********************/
+@media (min-width: 1030px) {
+
+    .blocks__container {
+        .block {
+            .block__image {
+                .objectfit-container {
+                    img {
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}
+
+/* end 1030px & Up */
+
+
+
+/*
+5. XL | 1240PX & UP
+*********************/
+@media (min-width: 1240px) {
+
+    .blocks__container {
+        &.view--grid {
+            .block {
+            }
+        }
+
+        .block {
+            .block__content-wrapper {
+                .block__rows {
+                    &.columns {
+                        @include prefix('column-count', '2', webkit moz);
+
+                        .block__row:first-of-type {
+                            @include prefix('column-span', 'all', webkit moz);
+                            @include font-size(20);
+                        }
+                    }
+
+                    .block__row {
+                        min-height: 34px;
+                        //display: block;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* end 1240px & Up */
