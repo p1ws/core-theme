@@ -31,7 +31,7 @@ a.btn,
     @include font-size(12);
     @include transition;
     color: $color__white;
-    font-family: $font__main;
+    font-family: $font__display;
     font-weight: 600;
     letter-spacing: .05rem;
     text-align: center;

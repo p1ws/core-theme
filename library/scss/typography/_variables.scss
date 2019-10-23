@@ -7,16 +7,14 @@ Stylesheet: Typography / Variables
 ******************************************************************/
 
 // Site Fonts
-$roboto:                                "Roboto", Helvetica, Arial, sans-serif;
+$font__karla:                                "Karla", Helvetica, Arial, sans-serif;
 
 // Primary Header Font
-$font__main:						    $roboto;
-$font__main--demi:						$roboto;
-
+$font__display:						    $font__karla;
 
 // Primary Body Text Font
-$font__body:				            $roboto;
+$font__body:				            $font__karla;
 
-$header:				                $roboto;
+$header:				                $font__karla;
 
 $fontawesome:                           "Font Awesome 5 Free";
