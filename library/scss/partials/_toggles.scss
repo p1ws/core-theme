@@ -1,0 +1,126 @@
+/******************************************************************
+Site Name: Ed Hamilton
+Author: P1WS
+
+Stylesheet: Chrystine Custom Stylesheet 08/13/19
+
+1. XS | Base
+2. SM | 481px & Up
+3. MD | 768px & Up
+4. LG | 1030px & Up
+5. XL | 1240px & Up
+
+******************************************************************/
+
+/*
+1. XS | BASE
+*********************/
+
+/* Toggle Functionality Styles */
+.toggle__container {
+    .toggle__content {        
+        display: none;
+        @include prefix('transition', 'display 0.5s ease', webkit moz ms o);
+    }
+    &.active {
+        .toggle__content {
+            display: block;
+        }
+    }
+}
+
+/* General Toggle Styles */
+.toggle__container {
+    border: solid 1px $color__gray--light;
+    border-radius: 4px;
+    padding: 2px;
+    margin: 20px 0;
+    .toggle__title {
+        color: $color__primary;
+        font-family: $header;
+        @include font-size(16);
+        font-weight: 600;
+        background-color: $color__white;
+        border-radius: 4px;
+        padding: 15px;
+        cursor: pointer;
+        @include prefix('transition', 'background-color 0.5s ease', webkit moz ms o);
+        h4 {            
+            margin: 0;
+        }
+    }
+    .toggle__content {
+        margin-top: 20px;
+        padding: 0 15px 15px 15px;        
+        .toggle__row {
+            .toggle__row-title {
+                margin-bottom: 10px;
+                border-bottom: dotted 1px $color__primary;
+                padding-bottom: 10px;
+                h5 {
+                    @include font-size(14);
+                    font-family: $header;
+                    text-transform: uppercase;
+                    color: $color__primary;
+                    margin:0;
+                }
+            }
+        }
+    }
+    /* Active Styles */
+    &.active {
+        .toggle__title {
+            color: $color__white;
+            background-color: $color__primary;
+        }        
+    }
+}
+
+/* end Base */
+  
+
+
+/*
+2. SM | 481PX & UP
+*********************/
+@media (min-width: 481px) {
+
+
+
+} /* end 481px & Up */
+    
+  
+
+/*
+3. MD | 768PX & UP
+*********************/
+@media (min-width: 768px) {
+	
+	/* General Toggle Styles */
+	.toggle__container {
+		margin: 40px 0;				
+	}
+
+} /* end 768px & Up */
+
+
+  
+/*
+4. LG | 1030PX & UP
+*********************/
+@media (min-width: 1030px) {
+
+
+
+} /* end 1030px & Up */
+ 
+
+
+/*
+5. XL | 1240PX & UP
+*********************/
+@media (min-width: 1240px) {
+
+
+
+} /* end 1240px & Up */

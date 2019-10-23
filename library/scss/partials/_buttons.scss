@@ -1,0 +1,155 @@
+/******************************************************************
+Site Name: Client Name
+Author: P1WS
+
+Stylesheet: "Partial Name" Stylesheet
+
+1. XS | Base
+2. SM | 481px & Up
+3. MD | 768px & Up
+4. LG | 1030px & Up
+5. XL | 1240px & Up
+
+******************************************************************/
+
+/*
+0. Resets
+*********************/
+button {
+    border: none;
+}
+
+
+
+/*
+1. XS | BASE
+*********************/
+
+/* Standard Buttons */
+a.btn,
+.btn {
+    @include font-size(12);
+    @include transition;
+    color: $color__white;
+    font-family: $font__main;
+    font-weight: 600;
+    letter-spacing: .05rem;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: $attr__border-radius;
+    display: inline-block;
+    padding: 10px 20px;
+    width: auto;
+    position: relative;
+
+    &--primary {
+        @extend .btn;
+        background-color: $color__primary;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: $color__white;
+            background-color: $color__active;
+        }
+    }
+
+    &--shape-arrow {
+        @extend .btn;
+        color: $color__primary;
+        background-color: $color__white;
+        border: solid 2px $color__primary;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: $color__white;
+            background-color: $color__primary;
+        }
+    }
+
+    &--arrow {
+        @extend .btn;
+        color: $color__primary;
+        background-color: $color__white;
+        border: solid 2px $color__primary;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: $color__white;
+            background-color: $color__primary;
+        }
+    }
+}
+
+
+
+a.btn,
+.btn,
+.text-link {
+    i.fa-arrow-right {
+        @include transition;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        i.fa-arrow-right {
+            -webkit-transform: translateX(5px);
+                    transform: translateX(5px);
+            color: $color__white;
+        }
+    }
+}
+
+/* end Base */
+
+
+
+/*
+2. SM | 481PX & UP
+*********************/
+@media (min-width: 481px) {}
+
+/* end 481px & Up */
+
+
+
+/*
+3. MD | 768PX & UP
+*********************/
+@media (min-width: 768px) {
+
+    /* Standard Buttons */
+    a.btn,
+    .btn {
+        @include font-size(14);
+
+        &--primary,
+        &--secondary {
+            @extend .btn;
+        }
+    }
+
+}
+
+/* end 768px & Up */
+
+
+
+/*
+4. LG | 1030PX & UP
+*********************/
+@media (min-width: 1030px) {}
+
+/* end 1030px & Up */
+
+
+
+/*
+5. XL | 1240PX & UP
+*********************/
+@media (min-width: 1240px) {}
+
+/* end 1240px & Up */

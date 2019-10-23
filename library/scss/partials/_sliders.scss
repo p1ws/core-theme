@@ -1,0 +1,111 @@
+/******************************************************************
+Site Name: STARC
+Author: P1WS
+
+Stylesheet: "Partial Name" Stylesheet
+
+1. XS | Base
+2. SM | 481px & Up
+3. MD | 768px & Up
+4. LG | 1030px & Up
+5. XL | 1240px & Up
+
+******************************************************************/
+
+/*
+1. XS | BASE
+*********************/
+
+/* Metaslider Plugin | Flexslider */
+.flexslider {
+    background-color: $color__gray--dark !important;
+}
+
+
+
+/* Slider */
+.slick-slider {
+	border: solid 1px $color__gray--light;
+	border-radius: $attr__border-radius;
+	.slick-slide {
+		&.objectfit-container {
+			height: 200px;
+		}	
+	}
+}
+
+
+/* Arrows */
+.slick-slider {
+	.slick-arrow {	
+		z-index: 10;
+		height: 40px;
+		width: 40px;
+		&:before {				
+			font-size: 40px;
+			color: $color__gray--light;
+		}
+	}
+	.slick-prev {
+    	transform: translate(50%, -50%);	
+		&:before {
+    		font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f053";
+		}
+	}
+	.slick-next {
+    	transform: translate(-50%, -50%);	
+		&:before {
+    		font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f054";
+		}		
+	}
+}
+
+
+/*
+2. SM | 481PX & UP
+*********************/
+@media (min-width: 481px) {
+
+
+
+} /* end 481px & Up */
+    
+  
+
+/*
+3. MD | 768PX & UP
+*********************/
+@media (min-width: 768px) {
+
+
+	.slick-slider {
+		.slick-slide {
+			&.objectfit-container {
+				height: 300px;
+			}
+		}
+	}	
+
+} /* end 768px & Up */
+
+
+  
+/*
+4. LG | 1030PX & UP
+*********************/
+@media (min-width: 1030px) {
+
+
+
+} /* end 1030px & Up */
+ 
+
+
+/*
+5. XL | 1240PX & UP
+*********************/
+@media (min-width: 1240px) {
+
+
+
+} /* end 1240px & Up */

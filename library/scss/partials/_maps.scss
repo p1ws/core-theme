@@ -1,0 +1,104 @@
+/******************************************************************
+Site Name: Client Name
+Author: P1WS
+
+Stylesheet: "Partial Name" Stylesheet
+
+1. XS | Base
+2. SM | 481px & Up
+3. MD | 768px & Up
+4. LG | 1030px & Up
+5. XL | 1240px & Up
+
+******************************************************************/
+
+/*
+1. XS | BASE
+*********************/
+.acf-map {
+	width: 100%;
+	height: 800px;
+	border: #ccc solid 1px;
+	margin: 40px 0;
+	img {
+		/* fixes potential theme css conflict */
+		max-width: inherit !important;
+	}
+}
+
+/* Modal Info Styles */
+.gm-style-iw {
+	padding: 20px!important;
+	max-width: 300px !important;
+	button {
+		top: 0 !important;
+		right: 0 !important;
+	}
+	h4 {
+		margin-top: 0 !important;
+	}
+}
+
+/* Destinations Map (Top of Page) */
+.page-template-page-destinations {
+	.acf-map {
+		height: 400px;
+		margin-top: 0;
+	}
+}
+
+
+/* Destination Itinerary Map (Inside Toggle) */
+.page-template-page-destination-itinerary {
+	.acf-map {
+		height: 300px;
+		margin-top: 0;
+		margin-bottom: 15px;
+	}
+}
+
+/* end Base */
+  
+
+
+/*
+2. SM | 481PX & UP
+*********************/
+@media (min-width: 481px) {
+
+
+
+} /* end 481px & Up */
+    
+  
+
+/*
+3. MD | 768PX & UP
+*********************/
+@media (min-width: 768px) {
+
+
+
+} /* end 768px & Up */
+
+
+  
+/*
+4. LG | 1030PX & UP
+*********************/
+@media (min-width: 1030px) {
+
+
+
+} /* end 1030px & Up */
+ 
+
+
+/*
+5. XL | 1240PX & UP
+*********************/
+@media (min-width: 1240px) {
+
+
+
+} /* end 1240px & Up */

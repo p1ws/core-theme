@@ -1,0 +1,135 @@
+/******************************************************************
+Site Name: Client Name
+Author: P1WS
+
+Stylesheet: "Partial Name" Stylesheet
+
+1. XS | Base
+2. SM | 481px & Up
+3. MD | 768px & Up
+4. LG | 1030px & Up
+5. XL | 1240px & Up
+
+******************************************************************/
+
+/*
+1. XS | BASE
+*********************/
+
+.page-template-default {}
+
+/* YouTube blocks */
+.wp-block-embed-youtube.aligncenter {
+	text-align: center;
+}
+
+/* end YouTube blocks */
+
+/* Blockquote boxes */
+.main--article__content,
+#additional-content {
+	blockquote {
+		background-color: #0071bb;
+		margin: 25px 0px;
+		padding: 50px;
+		border-radius: $attr__border-radius;
+		display: inline-block;
+		width: 100%;
+
+		h2,
+		p {
+			color: #fff;
+			text-align: center;
+		}
+
+		img {
+			width: 100%;
+			margin: 0 auto;
+			max-width: 100px;
+			height: auto;
+		}
+	}
+}
+
+/* end Blockquote boxes */
+
+/* Custom Page Elements */
+#team-bios {
+
+	h3,
+	h4 {
+		@include spacing-reset;
+	}
+
+	h3 {
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+
+	h4 {
+		margin-bottom: 20px;
+		text-transform: uppercase;
+		letter-spacing: .05rem;
+	}
+
+	img {
+		border: solid 1px $color__gray--lighter;
+		border-radius: $attr__border-radius;
+	}
+
+	div {
+		margin-bottom: 20px;
+	}
+}
+
+
+
+
+
+/* end Base */
+
+
+
+/*
+2. SM | 481PX & UP
+*********************/
+@media (min-width: 481px) {}
+
+/* end 481px & Up */
+
+
+
+/*
+3. MD | 768PX & UP
+*********************/
+@media (min-width: 768px) {
+
+	.page-template-default {}
+
+	/* Custom Page Elements */
+	#team-bios {
+		div {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+/* end 768px & Up */
+
+
+
+/*
+4. LG | 1030PX & UP
+*********************/
+@media (min-width: 1030px) {}
+
+/* end 1030px & Up */
+
+
+
+/*
+5. XL | 1240PX & UP
+*********************/
+@media (min-width: 1240px) {}
+
+/* end 1240px & Up */

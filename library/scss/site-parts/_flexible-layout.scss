@@ -1,0 +1,77 @@
+/******************************************************************
+Site Name: Client Name
+Author: P1WS
+
+Stylesheet: Flexible Layout Stylesheet
+
+1. XS | Base
+2. SM | 481px & Up
+3. MD | 768px & Up
+4. LG | 1030px & Up
+5. XL | 1240px & Up
+
+******************************************************************/
+
+/*
+1. XS | BASE
+*********************/
+
+#flexible-layout {
+    display: inline-block;
+    p {
+        margin-top: 0;
+    }
+    .margin-bottom {
+        margin-bottom: 20px;
+    }
+}
+
+/* end Base */
+  
+
+
+/*
+2. SM | 481PX & UP
+*********************/
+@media (min-width: 481px) {
+
+
+
+} /* end 481px & Up */
+    
+  
+
+/*
+3. MD | 768PX & UP
+*********************/
+@media (min-width: 768px) {
+
+    #flexible-layout {
+        .margin-bottom {
+            margin-bottom: 40px;
+        }
+    }
+
+} /* end 768px & Up */
+
+
+  
+/*
+4. LG | 1030PX & UP
+*********************/
+@media (min-width: 1030px) {
+
+
+
+} /* end 1030px & Up */
+ 
+
+
+/*
+5. XL | 1240PX & UP
+*********************/
+@media (min-width: 1240px) {
+
+
+
+} /* end 1240px & Up */

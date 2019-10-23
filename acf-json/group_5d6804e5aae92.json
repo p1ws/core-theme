@@ -1,0 +1,43 @@
+{
+    "key": "group_5d6804e5aae92",
+    "title": "Global",
+    "fields": [
+        {
+            "key": "field_5d68050cb7e85",
+            "label": "SEO H1 Title",
+            "name": "seo_h1_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "seamless",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1568392936
+}

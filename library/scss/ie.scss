@@ -1,0 +1,82 @@
+/******************************************************************
+Site Name: Client Name
+Author: P1WS
+
+Stylesheet: IE Stylesheet 
+
+So instead of using the respond.js file to add media query support
+to IE, we're going to use SASS to create an easily readable css file.
+Here, we import all the styles the standard stylesheet gets, only
+without the media queries. No need to worry about editing anything!
+
+******************************************************************/
+
+
+/******************************************************************
+IMPORTS & DEPENDENCIES
+Remember, all the BASE styles are called already since IE can
+read those. Below, we need to import only the stuff IE can't
+understand (what's inside the media queries). We also need to
+import the mixins file so SASS can understand the variables.
+******************************************************************/
+
+// Normalize CSS: http://necolas.github.io/normalize.css/
+@import "partials/normalize";
+
+// Sass Functions
+@import "partials/functions";
+
+// Import Mixins
+@import "partials/mixins";
+
+// Sass Variables
+@import "partials/variables";
+
+// Typography
+@import "typography/fonts";
+@import "typography/variables";
+@import "typography/type";
+
+/*
+you can call the larger styles if you want, but there's really no need
+*/
+
+
+/******************************************************************
+ADDITIONAL IE FIXES
+These fixes are now ONLY seen by IE, so you don't have to worry
+about using prefixes, although it's best practice. For more info
+on using Modernizr classes, check out this link:
+http://www.modernizr.com/docs/
+******************************************************************/
+
+/*
+For example, you can use something like:
+
+.no-textshadow .class { ... }
+
+You can also target specific versions by using the classes applied to
+the html element. These can sometimes change, so take a look inside the
+header.php file to see what they are:
+
+
+.lt-ie8 .class { ... }
+
+*/
+
+.objectfit-container {
+    &.objectfit-fallback {
+        background-size: cover;
+        background-position: center center;
+        // hide image if object fit is not supported - opacity to 0 for the link area
+        img { 
+            display: none;
+        }
+    }
+ }
+
+
+html.lt-ie8, html.lt-ie9 {	 
+	background-color: tint($color__primary, 98%);
+	background-image: none;
+}
