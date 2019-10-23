@@ -15,23 +15,35 @@ http://thesassway.com/advanced/modular-css-naming-conventions
 ******************************************************************/
 
 /*********************
-IMPORTING PARTIALS
-These files are needed at the beginning so that we establish all
-our mixins, functions, and variables that we'll be using across
-the whole project.
+IMPORTING MODULES
+The modules directory is reserved for Sass code that doesn't cause 
+Sass to actually output CSS. Things like mixin declarations, 
+functions, and variables.
 *********************/
 
 // Normalize CSS: http://necolas.github.io/normalize.css/
-@import "partials/normalize";
+@import "modules/normalize";
 
 // Sass Functions
-@import "partials/functions";
+@import "modules/functions";
 
 // Import Mixins
-@import "partials/mixins";
+@import "modules/mixins";
 
 // Sass Variables
-@import "partials/variables";
+@import "modules/variables";
+
+
+
+/*********************
+IMPORTING PARTIALS
+The partials directory is where the meat of my CSS is constructed. 
+A lot of folks like to break their stylesheets into header, 
+content, sidebar, and footer components (and a few others). 
+As I'm more of a SMACSS guy myself, I like to break things down 
+into much finer categories (typography, buttons, textboxes, 
+selectboxes, etc…).
+*********************/
 
 // Typography
 @import "typography/fonts";

@@ -1,0 +1,222 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Form Styles
+
+1. Defaults
+2. Main Search
+
+You're gonna see a few data-uri thingies down there. If you're not
+sure what they are, check this link out:
+http://css-tricks.com/data-uris/
+If you want to create your own, use this helpful link:
+http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
+
+******************************************************************/
+
+/* 
+1. DEFAULTS
+*********************/
+
+/*
+LABELS
+*/
+label {
+	&.hidden {
+		position: absolute;
+		left: 0;
+		top: -500px;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;		
+	}
+}
+
+
+/*
+INPUTS
+*/
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select,
+textarea,
+.field {
+	display: block;
+	height: 40px;
+	line-height: 1rem;
+	padding: 0 10px;
+	margin-bottom: 10px;
+	@include font-size(14);
+	color: $color__gray;
+	font-weight: 500;
+	border-radius: 3px;
+	vertical-align: middle;
+	box-shadow: none;
+	border: solid 1px $color__gray--light;
+	width: 100%;
+	max-width: 100%;
+	font-family: $header;
+	background-color: $color__white;
+	@include transition(background-color 0.24s ease-in-out);
+	
+	
+/*
+INPUT FOCUS / HOVER
+*/
+&:focus,
+&:active {
+	border-color: $color__primary;
+	outline: none; 
+}
+
+	
+/*
+ERROR NOTIFICATION
+*/
+&.error,
+&.is-invalid {
+	color: $color__secondary;
+    border-color: $color__secondary;    
+    outline-color: $color__secondary;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+  	content: "\f078";	
+}
+
+
+/*
+SUCCESS NOTIFICATION
+*/	
+&.success,
+&.is-valid {
+    color: $color__primary;
+    border-color: $color__primary;
+    background-color: $color__white;
+    background-position: 99% center;
+    background-repeat: no-repeat;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDRERkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDRFMEYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjY0MzQ0NERERjA0QjExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERFRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+7olkTQAAAfhJREFUeNqklU9oE0EUhzdroWjw0tBeWlDxkEaIp55TsCU9VKIgCrHBelA8CQ1Kr1WPbZrQ3gqtQqvGqxpQc2jBk6BIIaAGD4qNCKURpDSKiPi98gLDsJt//uBjsztvfnk7895sIPAw6/joGMThFJyAXn2+A+9gA57/TaY/eU0OeBgfhGm4DiGnsb7DAszxBz/NAdcKjMJLuNWCqagHbsscN5+L+hmH4QkMOe1L5jzFfNA2PgT34ajTuY7AGuZB0/hmh5m+gS0r8xv1zRvg+gGCHZiOwnF4DP3iB3sQkYxPd2C6CWfhB9Xwlus5+K1j4jXuaq3a+gM1H9OPcAa+7q9lPidZJqHbiIm7Wg22rsEI7FrPSzAMX/T+ADyAKSsu7Fr1KplehLvwCs5DvfBf65p+MypqRbO1FXK9utH4/QKuaqYTsG3E3INJv00Q46px3+XxanJ/Ute2/vqP4FKDza2KcdljIKdnhS0xXYULTaqmLMZFn8FFSFtvt6x70ExFCS5oUXspq2ssa7oEl1swFa+CGFdgtkHgPDyDKy02zyxNU6lXRUZb1EuHYayNNs+Yh5B0WQo+/8fpJnNTZFuzz2OpjoQ2QruSOQlMy35fEGmEGMxY9e1brxobw7TkWA1h6xfckUPb+JhGoE/Hpfvew7qUld/H9J8AAwDpw3WYrxcZ3QAAAABJRU5ErkJggg==);
+    outline-color: $color__primary;
+  }
+
+
+
+	
+/*
+DISABLED INPUT
+*/
+&[disabled],
+&.is-disabled {
+    cursor: not-allowed;
+    border-color: $color__gray--light;
+	color: $color__gray;
+    opacity: 0.6;
+    &:focus,
+    &:active {
+      background-color: $color__primary;
+    }
+  }
+}
+
+option:disabled {
+	color: $color__gray--light;
+}
+
+
+/*
+PASSWORD SPACING
+*/
+input[type="password"] {
+  letter-spacing: 0.3em;
+}
+
+
+/*
+TEXTAREAS
+*/
+textarea {
+  max-width: 100%;
+  min-height: 120px;
+  line-height: 1.5em;
+}
+
+
+/*
+SELECTS
+*/
+.select__wrapper {
+	position: relative;
+	&:after {
+		position: absolute;
+		right: 15px;
+		top: 8px;
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		content: "\f078";
+		color: $color__primary;
+		background-color: $color__white;
+	}	
+}
+
+select {
+	@include prefix('appearance', 'none', moz webkit)  ;
+	position: relative;
+}
+
+
+
+/* 
+1. DEFAULTS
+*********************/
+
+form[role="search"] {
+	div {
+		position: relative;
+		label, button {
+			display: none;
+		}				
+		&:after {
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+			content: "\f002";	
+			position: absolute;
+			top: 7px;
+			right: 0;
+			height: 100%;		
+			color: tint($color__primary, 60%);
+		}
+	}
+}
+
+form {
+
+input[type="submit"], button {
+	border: 0;
+	background-color: $color__gray--dark;
+	border-radius: $attr__border-radius;
+	color: $color__white;
+	padding: 15px 30px;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: .05rem;
+	margin-top: 20px;
+	@include transition;
+	&:active, &:focus, &:hover {
+		background-color: $color__primary;
+	}
+}
+	
+}
+
