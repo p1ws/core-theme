@@ -16,22 +16,64 @@ http://codex.wordpress.org/Editor_Style
 here http://codex.wordpress.org/Function_Reference/add_editor_style */
 body#tinymce.wp-editor {
 
+	/*********************
+	IMPORTING MODULES
+	The modules directory is reserved for Sass code that doesn't cause 
+	Sass to actually output CSS. Things like mixin declarations, 
+	functions, and variables.
+	*********************/
+
 	// Normalize CSS: http://necolas.github.io/normalize.css/
-	@import "partials/normalize";
+	@import "modules/normalize";
 
 	// Sass Functions
-	@import "partials/functions";
+	@import "modules/functions";
 
 	// Import Mixins
-	@import "partials/mixins";
+	@import "modules/mixins";
 
 	// Sass Variables
-	@import "partials/variables";
+	@import "modules/variables";
 
-	// Typography
+
+
+	/*********************
+	IMPORTING TYPOGRAPHY
+	The typography directory contains @font-face declarations,
+	type setup and variables.
+	*********************/
+
+	// Site  Fonts
 	@import "typography/fonts";
+
+	// Site Font Variables
 	@import "typography/variables";
+
+	// Site Type Styles
 	@import "typography/type";
+
+
+
+	/*********************
+	IMPORTING CLASSES
+	The classes directory is where grid, flex, visibility classes, etc.,
+	are created. These can be tweak as needed.
+	*********************/
+
+	// The Grid
+	@import "classes/grid";
+
+	// Flexbox Classes
+	@import "classes/flexbox";
+
+	// Alignment Classes
+	@import "classes/alignment";
+
+	// Visibility Classes
+	@import "classes/visibility";
+
+	// Layout Classes
+	@import "classes/layout";
 
 	width: 731px;
 	font-size: 100%;
