@@ -2,19 +2,39 @@
 Site Name: Client Name
 Author: P1WS
 
-Stylesheet: Typography / Variables
+Stylesheet: Typography Variables
+
+1. Site Fonts
+2. Font Family Variables
+3. Font Weight Variables
 
 ******************************************************************/
 
-// Site Fonts
-$font__karla:                                "Karla", Helvetica, Arial, sans-serif;
+/*
+1. Site Fonts
+**************************/
 
-// Primary Header Font
-$font__display:						    $font__karla;
+$font__qualion:                         "Qualion-ExtraBold", Helvetica, Arial, sans-serif;
+$font__karla:                           "Karla", Helvetica, Arial, sans-serif;
 
-// Primary Body Text Font
+
+
+/*
+2. Font Family Variables
+**************************/
+
+$font__display:						    $font__qualion;
 $font__body:				            $font__karla;
+$font__fa:                              "Font Awesome 5 Free"; 
 
-$header:				                $font__karla;
 
-$fontawesome:                           "Font Awesome 5 Free";
+
+
+/*
+3. Font Weight Variables
+**************************/
+
+$font-weight__light:                    300;
+$font-weight__normal:                   400;
+$font-weight__semibold:                 500;
+$font-weight__bold:                     700;

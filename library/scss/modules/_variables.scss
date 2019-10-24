@@ -4,32 +4,61 @@ Author: P1WS
 
 Stylesheet: Variables
 
-1. Colors
-2. Use-Case Variables
-3. Reusable Values
+1. Base Colors
+2. Tint Variables
+2. Shade Variables
+3. Attributes
 
 ******************************************************************/
 
 /* 
-1. BASE COLORS
-*********************/
+1. Base Colors
+**************************/
 
 $color__black: #000000;
-$color__gray--dark: tint($color__black, 20%);
-$color__gray: #666666;
-$color__gray--medium: #989898;
-$color__gray--light: #CCCCCC;
-$color__gray--lighter: #EEEEEE;
 $color__white: #FFFFFF;
 
-$color__primary: #0071BB;
-$color__primary--light: tint($color__primary, 30%);
-$color__primary--lighter: tint($color__primary, 60%);
-$color__primary--lightest: tint($color__primary, 90%);
-$color__secondary: #F8951F;
+$color__primary: #CC3333;
+$color__secondary: #3A3A38;
 
 $color__accent-1: #00B9AF;
 $color__accent-2: #666666;
+
+
+
+/* 
+2. Tint Variables
+**************************/
+
+$color__gray--light: tint($color__black, 30%);
+$color__gray--lighter: tint($color__black, 60%);
+$color__gray--lightest: tint($color__black, 90%);
+
+$color__primary--light: tint($color__primary, 30%);
+$color__primary--lighter: tint($color__primary, 60%);
+$color__primary--lightest: tint($color__primary, 90%);
+
+$color__secondary--light: tint($color__secondary, 30%);
+$color__secondary--lighter: tint($color__secondary, 60%);
+$color__secondary--lightest: tint($color__secondary, 90%);
+
+
+
+/* 
+2. Shade Variables
+**************************/
+
+$color__gray--dark: shade($color__white, 30%);
+$color__gray--darker: shade($color__white, 60%);
+$color__gray--darkest: shade($color__white, 90%);
+
+$color__primary--dark: shade($color__primary, 30%);
+$color__primary--darker: shade($color__primary, 60%);
+$color__primary--darkest: shade($color__primary, 90%);
+
+$color__secondary--dark: shade($color__primary, 30%);
+$color__secondary--darker: shade($color__primary, 60%);
+$color__secondary--darkest: shade($color__primary, 90%);
 
 
 
@@ -42,7 +71,7 @@ $color__active: $color__accent-1;
 
 
 /* 
-2. ATTRIBUTES
+2. Attributes
 *********************/
 
-$attr__border-radius: 4px;
+$attr__border-radius: 4px; 

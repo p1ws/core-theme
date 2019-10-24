@@ -97,7 +97,7 @@ Stylesheet: "Partial Name" Stylesheet
 							li {
 								margin-bottom: 10px;
 								a {
-									color: $color__gray;
+									color: $color__gray--lighter;
 									&:active, &:focus, &:hover {
 										color: $color__accent-1;
 									}
@@ -129,7 +129,7 @@ Stylesheet: "Partial Name" Stylesheet
 					}
 					span {
 						@include font-size(12);
-						color: $color__gray;
+						color: $color__gray--lighter;
 					}
 				}
 			}

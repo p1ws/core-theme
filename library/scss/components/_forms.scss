@@ -60,7 +60,7 @@ textarea,
 	padding: 0 10px;
 	margin-bottom: 10px;
 	@include font-size(14);
-	color: $color__gray;
+	color: $color__gray--lighter;
 	font-weight: 500;
 	border-radius: 3px;
 	vertical-align: middle;
@@ -68,7 +68,7 @@ textarea,
 	border: solid 1px $color__gray--light;
 	width: 100%;
 	max-width: 100%;
-	font-family: $header;
+	font-family: $font__body;
 	background-color: $color__white;
 	@include transition(background-color 0.24s ease-in-out);
 	
@@ -121,7 +121,7 @@ DISABLED INPUT
 &.is-disabled {
     cursor: not-allowed;
     border-color: $color__gray--light;
-	color: $color__gray;
+	color: $color__gray--lighter;
     opacity: 0.6;
     &:focus,
     &:active {

@@ -37,7 +37,7 @@ Stylesheet: Chrystine Custom Stylesheet 08/13/19
     margin: 20px 0;
     .toggle__title {
         color: $color__primary;
-        font-family: $header;
+        font-family: $font__body;
         @include font-size(16);
         font-weight: 600;
         background-color: $color__white;
@@ -59,7 +59,7 @@ Stylesheet: Chrystine Custom Stylesheet 08/13/19
                 padding-bottom: 10px;
                 h5 {
                     @include font-size(14);
-                    font-family: $header;
+                    font-family: $font__body;
                     text-transform: uppercase;
                     color: $color__primary;
                     margin:0;

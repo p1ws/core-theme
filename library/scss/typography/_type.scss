@@ -12,20 +12,21 @@ Stylesheet: Typography / Body
 
 ******************************************************************/
 
+
 /*
 1. XS | BASE
 *********************/
 body {
-	@include font-size(16);
-    color: tint($color__black, 13%);
 	font-family: $font__body;
-	font-weight: 500;
+	font-weight: $font-weight__normal;
 	line-height: 1.5;
+    color: $color__black;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	@include font-size(16);
 	* {
 		&::selection {
-			background-color: $color__secondary;
+			@include rgba-background($color__secondary, 0.6);
 			color: $color__white;
 		}
 	}
@@ -37,6 +38,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5 {
 	font-family: $font__display;
+	line-height: 1.5;
 	text-rendering: optimizelegibility;
 
 	a {
@@ -51,48 +53,43 @@ h5, .h5 {
 }
 
 h1, .h1 { 
-	@include font-size(40);
-	color: $color__primary;
-	line-height: 1.25;
+	@include font-size(48);
+	color: $color__black;
 	text-transform: uppercase;
-	font-weight: 900;
 }
 
 h2, .h2 {
-	@include font-size(30);
-	font-family: $font__display;
-	line-height: 1.25;
-	font-weight: 900;
-	color: $color__gray--dark;
+	@include font-size(36);
+	color: $color__primary;
+	text-transform: uppercase;
 }
 
 h3, .h3 {
 	@include font-size(24);
-	color: $color__primary;
-	line-height: 1.25;
-	font-weight: 500;
+	color: $color__black;
+	text-transform: uppercase;
 }
 
 h4, .h4 {
 	@include font-size(16);
-	line-height: 1.25;
-	font-weight: 500;
+	color: $color__secondary;
+	text-transform: uppercase;
 }
 
 h5, .h5 {
 	@include font-size(14);
-	line-height: 1.25;
-	letter-spacing: .125rem;
+	color: $color__primary;
+	text-transform: uppercase;
 }
 
 a, a:visited {
+	color: $color__secondary--darker;
 	text-decoration: none;
-	@include prefix('transition', 'all 0.5s ease', webkit moz ms o);
 	cursor: pointer;
-	color: $color__primary;
+	@include prefix('transition', 'all 0.5s ease', webkit moz ms o);
 	&:active, &:focus, &:hover {	
-		outline: none; 
 		color: $color__secondary;
+		outline: none; 
 	}
 	i {
 		margin-right: 5px;

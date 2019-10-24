@@ -129,10 +129,9 @@ Stylesheet: "Partial Name" Stylesheet
 				padding-bottom: 15px;
 				line-height: 1.25rem;
 				a {
-					color: $color__gray--medium {
-						&:active, &:focus, &:hover {
-							color: $color__accent-1;
-						}
+					color: $color__gray--lighter;
+					&:active, &:focus, &:hover {
+						color: $color__accent-1;
 					}
 				}
 			}

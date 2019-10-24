@@ -141,7 +141,7 @@ Stylesheet: Site Navigation Stylesheet
                         @include font-size(16);
                         display: block;
                         width: 90%;
-                        color: $color__gray;
+                        color: $color__gray--lighter;
                         font-weight: 600;
                         text-transform: uppercase;
                         letter-spacing: 1px;
@@ -165,7 +165,7 @@ Stylesheet: Site Navigation Stylesheet
                             text-align: right;
                             font-family: "Font Awesome 5 Free";
                             font-weight: 900;
-                            color: $color__gray;
+                            color: $color__gray--lighter;
                         }
                     }
 
@@ -180,7 +180,7 @@ Stylesheet: Site Navigation Stylesheet
                             width: 95.5%;
 
                             a {
-                                color: $color__gray--medium;
+                                color: $color__gray--lighter;
                                 @include font-size(14);
                                 font-weight: 600;
                             }
@@ -197,7 +197,7 @@ Stylesheet: Site Navigation Stylesheet
                             margin-left: 20px;
 
                             a {
-                                color: $color__gray;
+                                color: $color__gray--lighter;
                                 @include font-size(14);
                                 font-weight: 500;
                                 letter-spacing: 1px;
@@ -275,7 +275,7 @@ Stylesheet: Site Navigation Stylesheet
 
 
 // Rotate Dropdown Arrow Class
-.active-dropdown {
+.active-dropdown { 
     -webkit-transform: rotate(180deg) !important;
     transform: rotate(180deg) !important;
 }
