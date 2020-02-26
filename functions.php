@@ -8,7 +8,6 @@ just edit things like thumbnail sizes, header images,
 sidebars, comments, etc.
 */
 
-
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
 // require_once( 'library/admin.php' );
 
@@ -88,7 +87,6 @@ you like. Enjoy!
 */
 
 add_filter( 'image_size_names_choose', 'p1ws_custom_image_sizes' );
-
 function p1ws_custom_image_sizes( $sizes ) {
 	 return array_merge( $sizes, array(
 		  'p1ws-thumb-600' => __('600px by 150px'),
@@ -103,7 +101,6 @@ when you add media to your content blocks. If you add more image sizes,
 duplicate one of the lines in the array and name it according to your
 new image size.
 */
-
 
 /************* ACTIVE SIDEBARS ********************/
 
@@ -130,9 +127,6 @@ function p1ws_register_sidebars() {
 	)); 
 } // don't remove this bracket!
 
-
-
-
 function p1ws_head_cleanup() {
 	// EditURI link
 	remove_action( 'wp_head', 'rsd_link' );
@@ -150,7 +144,6 @@ function p1ws_head_cleanup() {
 	add_filter( 'style_loader_src', 'p1ws_remove_wp_ver_css_js', 9999 );
 	// remove Wp version from scripts
 	add_filter( 'script_loader_src', 'p1ws_remove_wp_ver_css_js', 9999 );
-
 } /* end P1WS head cleanup */
 
 // A better title
@@ -214,7 +207,6 @@ function p1ws_gallery_style($css) {
 	return preg_replace( "!<style type='text/css'>(.*?)</style>!s", '', $css );
 }
 
-
 /*********************
 SCRIPTS & ENQUEUEING
 *********************/
@@ -222,9 +214,9 @@ SCRIPTS & ENQUEUEING
 // loading modernizr and jquery, and reply script
 function p1ws_scripts_and_styles() {
 
-  global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
+	global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 
-  if (!is_admin()) {
+	if (!is_admin()) {
 
 		// modernizr (without media query polyfill)
 		wp_register_script( 'p1ws-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', true );
@@ -235,10 +227,10 @@ function p1ws_scripts_and_styles() {
 		// ie-only style sheet
 		wp_register_style( 'p1ws-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
 
-    // comment reply script for threaded comments
-    if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
-		  wp_enqueue_script( 'comment-reply' );
-    }
+		// comment reply script for threaded comments
+		if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
+			wp_enqueue_script( 'comment-reply' );
+		}
 
 		//adding scripts file in the footer
 		wp_register_script( 'p1ws-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
@@ -251,13 +243,11 @@ function p1ws_scripts_and_styles() {
 		$wp_styles->add_data( 'p1ws-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
 		/*
-		I recommend using a plugin to call jQuery
-		using the google cdn. That way it stays cached
-		and your site will load faster.
+		I recommend using a plugin to call jQuery using the Google CDN. 
+		That way it stays cached and your site will load faster.
 		*/
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'p1ws-js' );
-
 	}
 }
 
@@ -276,13 +266,13 @@ function p1ws_theme_support() {
 
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',
-	    array(
-	    'default-image' => '',    // background image default
-	    'default-color' => '',    // background color default (dont add the #)
-	    'wp-head-callback' => '_custom_background_cb',
-	    'admin-head-callback' => '',
-	    'admin-preview-callback' => ''
-	    )
+		array(
+			'default-image' => '',    // background image default
+			'default-color' => '',    // background color default (dont add the #)
+			'wp-head-callback' => '_custom_background_cb',
+			'admin-head-callback' => '',
+			'admin-preview-callback' => ''
+		)
 	);
 
 	// rss thingy
@@ -325,7 +315,6 @@ function p1ws_theme_support() {
 
 } /* end P1WSCore theme support */
 
-
 /*********************
 RELATED POSTS FUNCTION
 *********************/
@@ -363,23 +352,23 @@ PAGE NAVI
 
 // Numeric Page Navi (built into the theme by default)
 function p1ws_page_navi() {
-  global $wp_query;
-  $bignum = 999999999;
-  if ( $wp_query->max_num_pages <= 1 )
-    return;
-  echo '<nav class="pagination">';
-  echo paginate_links( array(
-    'base'         => str_replace( $bignum, '%#%', esc_url( get_pagenum_link($bignum) ) ),
-    'format'       => '',
-    'current'      => max( 1, get_query_var('paged') ),
-    'total'        => $wp_query->max_num_pages,
-    'prev_text'    => '&larr;',
-    'next_text'    => '&rarr;',
-    'type'         => 'list',
-    'end_size'     => 3,
-    'mid_size'     => 3
-  ) );
-  echo '</nav>';
+	global $wp_query;
+	$bignum = 999999999;
+	if ( $wp_query->max_num_pages <= 1 )
+  	return;
+	echo '<nav class="pagination">';
+	echo paginate_links( array(
+		'base'         => str_replace( $bignum, '%#%', esc_url( get_pagenum_link($bignum) ) ),
+		'format'       => '',
+		'current'      => max( 1, get_query_var('paged') ),
+		'total'        => $wp_query->max_num_pages,
+		'prev_text'    => '&larr;',
+		'next_text'    => '&rarr;',
+		'type'         => 'list',
+		'end_size'     => 3,
+		'mid_size'     => 3
+  	) );
+	echo '</nav>';
 } /* end page navi */
 
 /*********************
@@ -398,7 +387,6 @@ function p1ws_excerpt_more($more) {
 	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'p1wscore' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'p1wscore' ) .'</a>';
 }
 
-
 // Add ACF options page
 if ( function_exists( 'acf_add_options_page' ) ) :
 	acf_add_options_page(array(
@@ -410,32 +398,28 @@ if ( function_exists( 'acf_add_options_page' ) ) :
 	));		 
 endif;
 
-
 // Move Yoast SEO meta box to bottom of page
 add_filter( 'wpseo_metabox_prio', 'p1ws_metaboxbottom');
-
 if ( ! function_exists( 'p1ws_metaboxbottom ' ) ) :
 	function p1ws_metaboxbottom() {
 		return 'low';
 	}
 endif;
 
-
 // Replace WordPress logo on admin login screen 
 function my_login_logo() { ?>
-    <style type="text/css">
-	#login h1 a, .login h1 a {
-		background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/logo.png);
-		height:65px;
-		width:100%;
-		background-size: contain;
-		background-repeat: no-repeat;
-		padding-bottom: 30px;
-	}
-    </style>
+	<style type="text/css">
+		#login h1 a, .login h1 a {
+			background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/library/images/logo.png);
+			height: 65px;
+			width: 100%;
+			background-size: contain;
+			background-repeat: no-repeat;
+			padding-bottom: 30px;
+		}
+	</style>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
-
 
 // Remove nofollow attributes from post content
 function remove_nofollow($string) {
@@ -444,19 +428,8 @@ function remove_nofollow($string) {
 }
 add_filter('the_content', 'remove_nofollow');
 
-
 // Remove Yoast Schema in 11.0 +
-//add_filter( 'wpseo_json_ld_output', '__return_false' );
-
-// (Alt 1) Remove Yoast Schema in 11.0 +
-//add_filter( 'wpseo_json_ld_output', function( $this_data, $context ){return false; }, 10, 2 );
-
-// (Alt 2) Remove Yoast Schema in 11.0 +
-//add_filter( 'wpseo_json_ld_output', 'remove_yoast_schema', 10, 2 );
-//function remove_yoast_schema( $this_data, $context ) {
-//	return false;
-//}
-
+add_filter( 'wpseo_json_ld_output', function(){return false;} );
 
 // Register /wp-includes/js/jquery/jquery.js in footer
 function move_jquery_into_footer( $wp_scripts ) {
@@ -471,7 +444,6 @@ function move_jquery_into_footer( $wp_scripts ) {
 }
 add_action( 'wp_default_scripts', 'move_jquery_into_footer' );
 
-
 add_filter( 'body_class', 'custom_class' );
 function custom_class( $classes ) {
     if ( is_page_template( 'page-home.php' ) ) {
@@ -480,27 +452,10 @@ function custom_class( $classes ) {
     return $classes;
 }
 
-//Function to create cache directory for wp-scss plugin if it doesn't exist
-// add_action( 'init', 'wp_scss_check_for_sass_cache' );
-// function wp_scss_check_for_sass_cache() {
-// $wp_scss_path = ABSPATH . 'wp-content/plugins/wp-scss';
-// //Check to make sure plugin exists
-// if ( file_exists( $wp_scss_path ) ) {
-// $wp_scss_cache_path = $wp_scss_path . '/cache';
-// //Check to make see if cache directory exists, and if not create it
-// if ( ! file_exists( $wp_scss_cache_path ) ) {
-// mkdir( $wp_scss_cache_path, 0755 );
-// }
-// }
-// }
-
-
+// Custom excerpt more link
 function custom_excerpt_more_link($more){
   return '<a href="' . get_the_permalink() . '" rel="nofollow">&nbsp;[more]</a>';
 }
-
 add_filter('excerpt_more', 'custom_excerpt_more_link');
-
-
 
 /* DON'T DELETE THIS CLOSING TAG */ ?> 
