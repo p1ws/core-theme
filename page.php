@@ -3,20 +3,20 @@
 			<main class="container--slim">	
 				<?php if ( function_exists('yoast_breadcrumb') ) 
 					{yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>			
-				
+
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" class="main--article">
 						<h1 class="main--article__title">
 							<?php 
-							$seotitle = get_field( 'seo_h1_title' );
-							if ($seotitle) {
-								echo the_field('seo_h1_title');
-							}
-							else {
-								echo the_title(); 
-							} 
+								$seotitle = get_field( 'seo_h1_title' );
+								if ($seotitle) {
+									echo the_field('seo_h1_title');
+								}
+								else {
+									echo the_title(); 
+								} 
 							?>
-						</h1>																						
+						</h1>																				
 
 						<!-- Page Content -->
 						<section class="main--article__content">
@@ -35,10 +35,8 @@
 							<?php the_field('additional-content'); ?>
 						</section>						
 
-
 					</article><!-- end of article -->
 
-				
 					<?php endwhile; else : ?>
 					<article id="post-not-found" class="">
 						<header class="article-header">
@@ -51,20 +49,16 @@
 							<p><?php _e( 'This is the error message in the page-custom.php template.', 'p1wscore' ); ?></p>
 						</footer>
 					</article>
-				
+
 				<?php endif; ?> <!--- #main--article --->
-				
-				
 
-						<!-- Include / Content Grid  -->
-						<?php if( have_rows('content-grid') ): ?>
-							<section id="main--content-grid">
-								<?php include('includes/content-grid.php'); ?>
-							</section>
-						<?php endif; ?> <!-- end include/content-grid -->
-					
+				<!-- Include / Content Grid  -->
+				<?php if( have_rows('content-grid') ): ?>
+					<section id="main--content-grid">
+						<?php include('includes/content-grid.php'); ?>
+					</section>
+				<?php endif; ?> <!-- end include/content-grid -->
 
-				
 			</main> <!--- end of main --->
 
 <?php get_footer(); ?>
