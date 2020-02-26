@@ -4,11 +4,10 @@
 <!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
 <!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
-<html <?php language_attributes(); ?> class="no-js">
+	<html <?php language_attributes(); ?> class="no-js">
 <!--<![endif]-->
 
 <head>
-
 	<!-- Prefetch -->
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//track.hubspot.com">
@@ -31,15 +30,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<!-- Device Thumbs -->
-	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-touch-icon.png">
-	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+	<link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/library/images/apple-touch-icon.png">
+	<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png">
 	<!--[if IE]>
-<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-<![endif]-->
+		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico">
+	<![endif]-->
 	<?php // or, set /favicon.ico for IE10 win ?>
 	<meta name="msapplication-TileColor" content="#f01d4f">
-	<meta name="msapplication-TileImage"
-		content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
+	<meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri(); ?>/library/images/win8-tile-icon.png">
 
 	<!-- Pingback -->
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
@@ -51,27 +49,22 @@
 
 
 	<!-- Web Fonts -->
-	<link rel="preload" as="style" crossorigin=""
-		href="<?php echo get_template_directory_uri(); ?>/library/css/all.min.css" rel="stylesheet">
-
+	<link rel="preload" as="style" crossorigin="" href="<?php echo get_template_directory_uri(); ?>/library/css/all.min.css" rel="stylesheet">
 
 	<!-- Add the slick-theme.css if you want default styling -->
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/library/slick/slick.css" />
 
 	<!-- Add the slick-theme.css if you want default styling -->
-	<link rel="stylesheet" type="text/css"
-		href="<?php echo get_template_directory_uri(); ?>/library/slick/slick-theme.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/library/slick/slick-theme.css" />
 
 	<!-- Additional Scripts -->
 	<?php echo get_field('scripts_header', 'options'); ?>
 
 </head>
 
-
-<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+<body <?php body_class(); ?>>
 	<!-- Additional Scripts -->
 	<?php echo get_field('scripts_body', 'options'); ?>
-
 
 	<div id="site__content" class="flexrow xs--center lg--end">
 
@@ -128,7 +121,6 @@
 						<div id="nav--mobile__nav-btn">
 							<i class="fas fa-bars menu-bars" id=""></i>
 							<i class="fas fa-times hidden menu-exit" id=""></i>
-
 						</div>
 					</div>
 
