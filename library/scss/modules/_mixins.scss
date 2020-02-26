@@ -1,17 +1,13 @@
 /******************************************************************
-Site Name: TPD Construction Co.
+Site Name: Client Name
 Author: P1WS
 
 Stylesheet: Mixins Stylesheet
 
 This is where you can take advantage of Sass' great features: Mixins.
-I won't go in-depth on how they work exactly,
-there are a few articles below that will help do that. What I will
-tell you is that this will help speed up simple changes like
-changing a color or adding CSS3 techniques gradients.
-
-A WORD OF WARNING: It's very easy to overdo it here. Be careful and
-remember less is more.
+They can help speed up simple changes like changing a color or adding 
+CSS3 techniques gradients. A WORD OF WARNING: It's very easy to overdo 
+it here. Be careful and remember: less is more.
 
 Helpful:
 http://sachagreif.com/useful-sass-mixins/
@@ -30,6 +26,7 @@ https://w3bits.com/sass-mixins/
   @include prefix('display', 'flex', webkit ms);
 }
 
+
 /*********************
 CLEARFIX
 https://w3bits.com/sass-mixins/
@@ -44,7 +41,6 @@ https://w3bits.com/sass-mixins/
 }
 
 
-
 /*********************
 TRANSITION
 *********************/
@@ -56,7 +52,6 @@ TRANSITION
     #{$prefix}transition: $transition;
   }
 }
-
 
 
 /*********************
@@ -74,7 +69,6 @@ CSS3 GRADIENTS
 }
 
 
-
 /*********************
 BOX SIZING
 *********************/
@@ -86,7 +80,6 @@ BOX SIZING
 	-ms-box-sizing:     $type;
 	box-sizing:         $type;
 }
-
 
 
 /*****************************
@@ -105,7 +98,6 @@ https://w3bits.com/sass-mixins/
     #{$property}: #{$value};
   }
 }
-
 
 
 /*****************************
@@ -128,7 +120,6 @@ https://w3bits.com/sass-mixins/
 }
 
 
-
 /*****************************
 BACKGROUND GRADIENT
 https://w3bits.com/sass-mixins/
@@ -149,7 +140,6 @@ https://w3bits.com/sass-mixins/
 }
 
 
-
 /*****************************
 REM UNITS
 https://w3bits.com/sass-mixins/
@@ -162,7 +152,6 @@ https://w3bits.com/sass-mixins/
 }
  
 
-
 /*****************************
 List Styles Reset
 ******************************/
@@ -172,15 +161,12 @@ List Styles Reset
 	li {
 		list-style-type: none;
 	}
-}	
-
-
+}
 @mixin list-inline {
   li {
     display: inline-block;
   }
-}
-  
+} 
 
 
 /*****************************
@@ -191,13 +177,10 @@ Spacing Resets
   margin: 0;
   padding: 0;
 }
-
 @mixin spacing-reset--top {
   margin-top: 0;
   padding-top: 0;
 }
-
-
 @mixin spacing-reset--bottom {
   margin-bottom: 0;
   padding-bottom: 0;
@@ -216,8 +199,6 @@ https://css-tricks.com/snippets/sass/mixin-to-qualify-a-selector/
 }
 
 
-
-
 /****************************************************************
 HEXADECIMAL TO RGBA CONVERSION 
 https://newmediadenver.com/hexadecimal-to-rgba-conversion-with-sass/
@@ -229,7 +210,6 @@ https://newmediadenver.com/hexadecimal-to-rgba-conversion-with-sass/
 }
 
 
-
 /****************************************************************
 SECTION PADDING
 *****************************************************************/
@@ -237,13 +217,11 @@ SECTION PADDING
 @mixin section-padding {
   padding: 20px 0;
 }
-
 @media screen and (min-width: 768px) {
   @mixin section-padding {
     padding: 40px 0;
   }  
 }
-
 @media screen and (min-width: 1030px) {
   @mixin section-padding {
     padding: 80px 0;
@@ -258,7 +236,6 @@ CONTENT PADDING
 @mixin content-padding {
   padding: 20px;
 }
-
 @media screen and (min-width: 768px) {
   @mixin content-padding {
     padding: 40px;
