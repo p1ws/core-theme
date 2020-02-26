@@ -1,5 +1,5 @@
 /******************************************************************
-Theme Name: PortMA
+Theme Name: P1WS-Core
 Theme URI: https://www.p1ws.com/
 Description: Custom WordPress theme by Page One Web Solutions.
 Author: P1WS
@@ -59,12 +59,6 @@ in the REAL stylesheet in library/css/style.css. We need these here
 to keep it happy. 
 */
 
-.sticky {}
-
-/* DO NOT EDIT THIS */
-.gallery-caption {}
-
-/* THESE ARE USELESS */
-.bypostauthor {}
-
-/* THEY ARE ONLY TO KEEP THEME CHECK HAPPY */
+.sticky {}              /* DO NOT EDIT THIS */
+.gallery-caption {}     /* THESE ARE USELESS */
+.bypostauthor {}        /* THEY ARE ONLY TO KEEP THEME CHECK HAPPY */
