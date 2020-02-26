@@ -8,7 +8,6 @@
 		<h1 class="main--article__title">Search</h1>															
 	</section>  <!--- end of #header--page --->
 
-
 	<main class="container--slim">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<article id="post-<?php the_ID(); ?>" role="article">
@@ -27,23 +26,22 @@
 			</article>
 
 			<?php endwhile; ?>
-			<?php p1ws_page_navi(); ?>
+				<?php p1ws_page_navi(); ?>
 			<?php else : ?>
 
-			<article id="post-not-found" class="hentry">
-				<header class="article-header">
-					<h1><?php _e( 'Sorry, No Results.', 'p1wscore' ); ?></h1>
-				</header>
-				<section class="entry-content">
-					<p><?php _e( 'Try your search again.', 'p1wscore' ); ?></p>
-				</section>
-				<footer class="article-footer">
-					<p></p>
-				</footer>
-			</article>
+				<article id="post-not-found" class="hentry">
+					<header class="article-header">
+						<h1><?php _e( 'Sorry, No Results.', 'p1wscore' ); ?></h1>
+					</header>
+					<section class="entry-content">
+						<p><?php _e( 'Try your search again.', 'p1wscore' ); ?></p>
+					</section>
+					<footer class="article-footer">
+						<p></p>
+					</footer>
+				</article>
 
-		<?php endif; ?>
-	</main>
-
+			<?php endif; ?>
+		</main>
 
 <?php get_footer(); ?>
