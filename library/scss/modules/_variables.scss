@@ -11,10 +11,8 @@ Stylesheet: Variables
 
 ******************************************************************/
 
-/* 
-1. Base Colors
+/* 1. Base Colors
 **************************/
-
 $color__black: #000000;
 $color__white: #FFFFFF;
 
@@ -25,11 +23,8 @@ $color__accent-1: #00B9AF;
 $color__accent-2: #666666;
 
 
-
-/* 
-2. Tint Variables
+/* 2. Tint Variables
 **************************/
-
 $color__gray--light: tint($color__black, 30%);
 $color__gray--lighter: tint($color__black, 60%);
 $color__gray--lightest: tint($color__black, 90%);
@@ -43,11 +38,8 @@ $color__secondary--lighter: tint($color__secondary, 60%);
 $color__secondary--lightest: tint($color__secondary, 90%);
 
 
-
-/* 
-2. Shade Variables
+/* 2. Shade Variables
 **************************/
-
 $color__gray--dark: shade($color__white, 30%);
 $color__gray--darker: shade($color__white, 60%);
 $color__gray--darkest: shade($color__white, 90%);
@@ -61,17 +53,12 @@ $color__secondary--darker: shade($color__primary, 60%);
 $color__secondary--darkest: shade($color__primary, 90%);
 
 
-
-/* 
-2. USE-CASE VARIABLES
+/* 2. USE-CASE VARIABLES
 *********************/
 $color__action: $color__secondary;
 $color__active: $color__accent-1;
 
 
-
-/* 
-2. Attributes
+/* 2. Attributes
 *********************/
-
 $attr__border-radius: 4px; 
