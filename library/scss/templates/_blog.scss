@@ -12,10 +12,9 @@ Stylesheet: "Partial Name" Stylesheet
 
 ******************************************************************/
 
-/*
-1. XS | BASE
-*********************/
 
+/* 1. XS | BASE
+*********************/
 .blog,
 .archive {
 
@@ -183,38 +182,34 @@ body.single-post {
 	}
 }
 
-/*
-2. SM | 481PX & UP
+
+/* 2. SM | 481PX & UP
 *********************/
 @media (min-width: 481px) {
 	.blog {}
 }
-
 /* end 481px & Up */
 
-/*
-3. MD | 768PX & UP
+
+/* 3. MD | 768PX & UP
 *********************/
 @media (min-width: 768px) {
 	.blog {}
 }
-
 /* end 768px & Up */
 
-/*
-4. LG | 1030PX & UP
+
+/* 4. LG | 1030PX & UP
 *********************/
 @media (min-width: 1030px) {
 	.blog {}
 }
-
 /* end 1030px & Up */
 
-/*
-5. XL | 1240PX & UP
+
+/* 5. XL | 1240PX & UP
 *********************/
 @media (min-width: 1240px) {
 	.blog {}
 }
-
 /* end 1240px & Up */
