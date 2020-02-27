@@ -12,15 +12,12 @@ Stylesheet: "Partial Name" Stylesheet
 
 ******************************************************************/
 
-/*
-1. XS | BASE
+
+/* 1. XS | BASE
 *********************/
-
-
 #site__container {
     position: relative;
 }
-
 
 .global-links {
     @include list-inline;
@@ -40,53 +37,33 @@ Stylesheet: "Partial Name" Stylesheet
     }
 }
 
-
 #header--global__links {
     .global-links {
         margin: 0;
     }
 }
-
-
 /* end Base */
-  
 
 
-/*
-2. SM | 481PX & UP
+/* 2. SM | 481PX & UP
 *********************/
-@media (min-width: 481px) {
+@media (min-width: 481px) {}
+/* end 481px & Up */  
 
 
-
-} /* end 481px & Up */
-     
-  
-
-/*
-3. MD | 768PX & UP
+/* 3. MD | 768PX & UP
 *********************/
-@media (min-width: 768px) {
+@media (min-width: 768px) {}
+/* end 768px & Up */
 
 
-
-} /* end 768px & Up */
-
-
-  
-/*
-4. LG | 1030PX & UP
+/* 4. LG | 1030PX & UP
 *********************/
-@media (min-width: 1030px) {
+@media (min-width: 1030px) {}
+/* end 1030px & Up */
 
 
-
-} /* end 1030px & Up */
- 
-
-
-/*
-5. XL | 1240PX & UP
+/* 5. XL | 1240PX & UP
 *********************/
 @media (min-width: 1240px) {
 
@@ -95,5 +72,5 @@ Stylesheet: "Partial Name" Stylesheet
             @include font-size(18);
         }
     }
-
-} /* end 1240px & Up */
+}
+/* end 1240px & Up */
