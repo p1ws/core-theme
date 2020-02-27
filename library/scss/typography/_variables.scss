@@ -10,30 +10,21 @@ Stylesheet: Typography Variables
 
 ******************************************************************/
 
-/*
-1. Site Fonts
-**************************/
 
-$font__qualion:                         "Qualion-ExtraBold", Helvetica, Arial, sans-serif;
+/* 1. Site Fonts
+**************************/
 $font__karla:                           "Karla", Helvetica, Arial, sans-serif;
 
 
-
-/*
-2. Font Family Variables
+/* 2. Font Family Variables
 **************************/
-
-$font__display:						    $font__qualion;
-$font__body:				            $font__karla;
-$font__fa:                              "Font Awesome 5 Free"; 
-
+$font__display:				$font__qualion;
+$font__body:				$font__karla;
+$font__fa:				"Font Awesome 5 Pro"; 
 
 
-
-/*
-3. Font Weight Variables
+/* 3. Font Weight Variables
 **************************/
-
 $font-weight__light:                    300;
 $font-weight__normal:                   400;
 $font-weight__semibold:                 500;
