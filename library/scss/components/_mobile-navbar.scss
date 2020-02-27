@@ -12,10 +12,9 @@ Stylesheet: Mobile Sticky Navigation Stylesheet
 
 ******************************************************************/
 
-/*
-1. XS | BASE
-*********************/
 
+/* 1. XS | BASE
+*********************/
 #nav--mobile {
 	display: block;
 	position: fixed;
@@ -104,7 +103,6 @@ Stylesheet: Mobile Sticky Navigation Stylesheet
 		}
 	}
 }
-
 
 /* RESPONSIVE MENU PLUGIN GLOBAL STYLES */
 #responsive-menu-container::-webkit-scrollbar {
@@ -293,22 +291,16 @@ Stylesheet: Mobile Sticky Navigation Stylesheet
 		}
 	}
 }
-
 /* end Base */
 
 
-
-/*
-2. SM | 481PX & UP
+/* 2. SM | 481PX & UP
 *********************/
 @media (min-width: 481px) {}
-
 /* end 481px & Up */
 
 
-
-/*
-3. MD | 768PX & UP
+/* 3. MD | 768PX & UP
 *********************/
 @media (min-width: 768px) {
 
@@ -378,15 +370,11 @@ Stylesheet: Mobile Sticky Navigation Stylesheet
 			}
 		}
 	}
-
 }
-
 /* end 768px & Up */
 
 
-
-/*
-4. LG | 1030PX & UP
+/* 4. LG | 1030PX & UP
 *********************/
 @media (min-width: 1030px) {
 	#nav--mobile {
@@ -399,14 +387,10 @@ Stylesheet: Mobile Sticky Navigation Stylesheet
 	}
 
 }
-
 /* end 1030px & Up */
 
 
-
-/*
-5. XL | 1240PX & UP
+/* 5. XL | 1240PX & UP
 *********************/
 @media (min-width: 1240px) {}
-
 /* end 1240px & Up */
