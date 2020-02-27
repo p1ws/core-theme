@@ -12,10 +12,9 @@ Stylesheet: "Partial Name" Stylesheet
 
 ******************************************************************/
 
-/*
-1. XS | BASE
-*********************/
 
+/* 1. XS | BASE
+*********************/
 #catapult-cookie-bar {
     background-color: $color__gray--dark !important;
 
@@ -25,60 +24,38 @@ Stylesheet: "Partial Name" Stylesheet
     }
 }
 
-
-
 .home {}
 
 /* end Base */
 
 
-
-/*
-2. SM | 481PX & UP
+/* 2. SM | 481PX & UP
 *********************/
 @media (min-width: 481px) {
-
     .home {}
-
 }
-
 /* end 481px & Up */
 
 
-
-/*
-3. MD | 768PX & UP
+/* 3. MD | 768PX & UP
 *********************/
 @media (min-width: 768px) {
-
     .home {}
-
 }
-
 /* end 768px & Up */
 
 
-
-/*
-4. LG | 1030PX & UP
+/* 4. LG | 1030PX & UP
 *********************/
 @media (min-width: 1030px) {
-
     .home {}
-
 }
-
 /* end 1030px & Up */
 
 
-
-/*
-5. XL | 1240PX & UP
+/* 5. XL | 1240PX & UP
 *********************/
 @media (min-width: 1240px) {
-
     .home {}
-
 }
-
 /* end 1240px & Up */
