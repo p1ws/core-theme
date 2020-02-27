@@ -13,14 +13,13 @@ Stylesheet: Typography / Body
 ******************************************************************/
 
 
-/*
-1. XS | BASE
+/* 1. XS | BASE
 *********************/
 body {
 	font-family: $font__body;
 	font-weight: $font-weight__normal;
 	line-height: 1.5;
-    color: $color__black;
+    	color: $color__black;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	@include font-size(16);
@@ -125,45 +124,28 @@ ol li {
 		}
 	}
 }
-
 /* end Base */
-  
 
 
-/*
-2. SM | 481PX & UP
+/* 2. SM | 481PX & UP
 *********************/
-@media (min-width: 481px) {
-
-} 
+@media (min-width: 481px) {}
 /* end 481px & Up */
-    
-  
 
-/*
-3. MD | 768PX & UP
+
+/* 3. MD | 768PX & UP
 *********************/
-@media (min-width: 768px) {
-
-} 
+@media (min-width: 768px) {}
 /* end 768px & Up */
 
 
-  
-/*
-4. LG | 1030PX & UP
+/* 4. LG | 1030PX & UP
 *********************/
-@media (min-width: 1030px) {
-
-} 
+@media (min-width: 1030px) {}
 /* end 1030px & Up */
- 
 
 
-/*
-5. XL | 1240PX & UP
+/* 5. XL | 1240PX & UP
 *********************/
-@media (min-width: 1240px) {
-
-} 
+@media (min-width: 1240px) {}
 /* end 1240px & Up */
