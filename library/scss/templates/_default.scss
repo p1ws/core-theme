@@ -12,17 +12,15 @@ Stylesheet: "Partial Name" Stylesheet
 
 ******************************************************************/
 
-/*
-1. XS | BASE
-*********************/
 
+/* 1. XS | BASE
+*********************/
 .page-template-default {}
 
 /* YouTube blocks */
 .wp-block-embed-youtube.aligncenter {
 	text-align: center;
 }
-
 /* end YouTube blocks */
 
 /* Blockquote boxes */
@@ -50,7 +48,6 @@ Stylesheet: "Partial Name" Stylesheet
 		}
 	}
 }
-
 /* end Blockquote boxes */
 
 /* Custom Page Elements */
@@ -81,26 +78,16 @@ Stylesheet: "Partial Name" Stylesheet
 		margin-bottom: 20px;
 	}
 }
-
-
-
-
-
 /* end Base */
 
 
-
-/*
-2. SM | 481PX & UP
+/* 2. SM | 481PX & UP
 *********************/
 @media (min-width: 481px) {}
-
 /* end 481px & Up */
 
 
-
-/*
-3. MD | 768PX & UP
+/* 3. MD | 768PX & UP
 *********************/
 @media (min-width: 768px) {
 
@@ -113,23 +100,16 @@ Stylesheet: "Partial Name" Stylesheet
 		}
 	}
 }
-
 /* end 768px & Up */
 
 
-
-/*
-4. LG | 1030PX & UP
+/* 4. LG | 1030PX & UP
 *********************/
 @media (min-width: 1030px) {}
-
 /* end 1030px & Up */
 
 
-
-/*
-5. XL | 1240PX & UP
+/* 5. XL | 1240PX & UP
 *********************/
 @media (min-width: 1240px) {}
-
 /* end 1240px & Up */
