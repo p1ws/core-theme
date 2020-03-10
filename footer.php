@@ -8,7 +8,7 @@
 						</a>
 						<!-- GLOBAL LINKS -->
 						<div id="footer--global__links" class="xs--1 xs--align-center md--1of2 md--align-right">
-							<?php include('includes/global-links.php'); ?>						
+							<?php include(get_template_directory().'/includes/global-links.php'); ?>
 						</div>					
 					</section>
 
