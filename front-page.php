@@ -20,21 +20,21 @@
 						<section class="main--article__content">
 							<?php the_content(); ?>
 						</section> <!-- end page-content -->
+					</article>
+				<?php endwhile; else : ?>
+					<article id="post-not-found" class="">
+						<header class="article-header">
+							<h1><?php _e( 'Oops, Post Not Found!', 'p1wscore' ); ?></h1>
+						</header>
+						<section class="entry-content">
+							<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'p1wscore' ); ?></p>
+						</section>
+						<footer class="article-footer">	
+							<p><?php _e( 'This is the error message in the page-custom.php template.', 'p1wscore' ); ?></p>
+						</footer>
+					</article>
 
-					<?php endwhile; else : ?>
-						<article id="post-not-found" class="">
-							<header class="article-header">
-								<h1><?php _e( 'Oops, Post Not Found!', 'p1wscore' ); ?></h1>
-							</header>
-							<section class="entry-content">
-								<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'p1wscore' ); ?></p>
-							</section>
-							<footer class="article-footer">	
-								<p><?php _e( 'This is the error message in the page-custom.php template.', 'p1wscore' ); ?></p>
-							</footer>
-						</article>
-
-					<?php endif; ?> <!--- #main--article --->
+				<?php endif; ?> <!--- #main--article --->
 			
 			</main> <!--- end of main --->
 
